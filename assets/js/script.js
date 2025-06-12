@@ -42,13 +42,13 @@ alert("Joueur 2, c'est à vous !")
 alert("La console vous donne vos lettres rentrez précédemment")
 
 let nb0Etat = etat.filter(item => item === 0).length   //Regarde si etat possède un 0
-while (devine != mot && essaie !== 0 && nb0Etat !== 0 && devine == "") {
+while (devine != mot && essaie !== 0 && nb0Etat !== 0 || devine === "" && essaie !== 0) {
     alert(`le mot du joueur 1 est ${lettresCaché}\nTu as ${essaie} essaie`)
     devine = prompt("Devine une lettre ou le mot")
     devine = devine.toUpperCase()
     console.log(devine)
     for (let i = 0; i < mot.length; i++) {
-        if (lettres[i].includes(devine)) {
+        if (lettres[i].includes(devine) && devine !== "") {
             lettresCaché[i] = lettres[i]
             etat[i] = 1
         }
@@ -61,7 +61,7 @@ while (devine != mot && essaie !== 0 && nb0Etat !== 0 && devine == "") {
 
 
 // MESSAGE VICTOIRE OU DEFAITE
-if (devine == mot || nb0Etat == 0 || devine != "") {
+if (devine == mot && devine !== "" || nb0Etat == 0) {
     alert(`Felicitation tu as gagné ! Le mot était ${mot}`)
 } else {
     alert(`Dommage ! Tu as perdu ! Le mot était ${mot}`)
