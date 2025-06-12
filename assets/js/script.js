@@ -27,7 +27,7 @@ for (let i = 0; i < mot.length; i++) {
 
 
 // NOMBRE D'ESSAI
-essaie = +prompt("Rentrer le nombre d'essai du joeuur 2 (supérieur au nombre de lettre de votre mot OBLIGATOIRE")
+essaie = +prompt("Rentrer le nombre d'essai du joeuur 2 (supérieur au nombre de lettre de votre mot OBLIGATOIRE)")
 
 while (isNaN(essaie) || essaie <= mot.length) {
     essaie = +prompt("Rentrer un NOMBRE SUPERIEUR au nombres de lettres de votre mot")
