@@ -1,1 +1,1 @@
-Joue avec moi ! jordantrehin76610.github.io/JSPendu/
+Joue avec moi ! https://jordantrehin76610.github.io/JSPendu/
